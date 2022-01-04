@@ -11,3 +11,4 @@ C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Models.Web.Api\obj\Debug\TRAX
 C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Models.Web.Api\obj\Debug\TRAX.Models.Web.Api.pdb
 C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Models.Web.Api\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Models.Web.Api\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Models.Web.Api\obj\Debug\TRAX.Models.Web.Api.csproj.AssemblyReference.cache

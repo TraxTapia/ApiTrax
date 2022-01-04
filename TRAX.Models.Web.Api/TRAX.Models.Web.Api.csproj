@@ -59,15 +59,23 @@
     <Compile Include="Error\Error.cs" />
     <Compile Include="Logger\ILogger.cs" />
     <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Models\BDCajaAhorro\Ahorro.cs" />
+    <Compile Include="Models\BDCajaAhorro\Usuario.cs" />
     <Compile Include="Models\BDContext\ApiTraxDB.cs" />
     <Compile Include="Models\BasePapeleria\Producutos.cs" />
     <Compile Include="Models\BasePapeleria\Rol.cs" />
     <Compile Include="Models\BasePapeleria\Usuarios.cs" />
+    <Compile Include="Models\BDContext\CajaAhorro.cs" />
     <Compile Include="OperationResult\IOperationResult.cs" />
     <Compile Include="OperationResult\OperationResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializer\JsonSerializer.cs" />
+    <Compile Include="TraxApi\AhorroDTO.cs" />
+    <Compile Include="TraxApi\Request\RequestCajaAhorro\ObtenerAhorroByUsuarioRequestDTO.cs" />
+    <Compile Include="TraxApi\Request\RequestCajaAhorro\RequestAhorroDTO.cs" />
+    <Compile Include="TraxApi\Request\RequestCajaAhorro\UsuariosRequestDTO.cs" />
     <Compile Include="TraxApi\Request\UsuarioRequestDTO.cs" />
+    <Compile Include="TraxApi\Response\ObtenerAhorroByUsuarioReponseDTO.cs" />
     <Compile Include="TraxApi\Response\UsuariosResponseDTO.cs" />
     <Compile Include="TraxApi\UsuariosDTO.cs" />
   </ItemGroup>
