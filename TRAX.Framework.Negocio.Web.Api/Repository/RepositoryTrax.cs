@@ -1,6 +1,7 @@
 ﻿using RAX.Models.Web.Api.Logger;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -110,9 +111,9 @@ namespace TRAX.Framework.Negocio.Web.Api.Repository
         public List<Ahorro> GetAhorrosByUsuario(int IdUsuario)
         {
             List<Ahorro> _listAhorro = new List<Ahorro>();
-            using (CajaAhorro _contex = new CajaAhorro())
+            using (CajaAhorro _context = new CajaAhorro())
             {
-                _listAhorro = _contex.Ahorro.Where(x => x.Id_Usuario == IdUsuario).ToList();
+                _listAhorro = _context.Ahorro.Include(x=> x.Usuario).Where(x => x.Id_Usuario == IdUsuario).ToList();
 
             }
             return _listAhorro;
@@ -122,9 +123,9 @@ namespace TRAX.Framework.Negocio.Web.Api.Repository
         public bool ExisteRegistro(int IdUsuario)
         {
             bool existe = false;
-            using (var contex = new CajaAhorro())
+            using (var context = new CajaAhorro())
             {
-               existe = contex.Ahorro.Any(x => x.Id_Usuario == IdUsuario);
+               existe = context.Ahorro.Any(x => x.Id_Usuario == IdUsuario);
                 
             }
             return existe;

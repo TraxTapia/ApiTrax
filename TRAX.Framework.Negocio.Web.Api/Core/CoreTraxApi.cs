@@ -142,6 +142,7 @@ namespace TRAX.Framework.Negocio.Web.Api.Core
                 Id = x.Id,
                 Cantidad = x.Cantidad,
                 IdUsuario = x.Id_Usuario,
+                NombreCompleto = string.Join(" ", x.Usuario.Nombre, x.Usuario.ApellidoPaterno, x.Usuario.ApellidoMaterno),
                 FechaCobro = x.Fecha_Cobro,
                 Total = x.Total,
             }).ToList();
