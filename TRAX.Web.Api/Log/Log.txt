@@ -1,0 +1,15 @@
+06/01/2022 03:18:18.1818 p. m. | No se econtraron resultados con el Id del Usuario 0
+   en TRAX.Framework.Negocio.Web.Api.Core.CoreTraxApi.FindAhorroByIdUsuario(Int32 IdUsuario) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Framework.Negocio.Web.Api\Core\CoreTraxApi.cs:línea 132
+   en TRAX.Web.Api.Controllers.CajaAhorroController.obtenerAhorros(ObtenerAhorroByUsuarioRequestDTO request) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Web.Api\Controllers\CajaAhorroController.cs:línea 105
+06/01/2022 03:22:52.2252 p. m. | No se econtraron resultados con el Id del Usuario 0
+   en TRAX.Framework.Negocio.Web.Api.Core.CoreTraxApi.FindAhorroByIdUsuario(Int32 IdUsuario) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Framework.Negocio.Web.Api\Core\CoreTraxApi.cs:línea 132
+   en TRAX.Web.Api.Controllers.CajaAhorroController.obtenerAhorros(ObtenerAhorroByUsuarioRequestDTO request) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Web.Api\Controllers\CajaAhorroController.cs:línea 105
+06/01/2022 03:22:58.2258 p. m. | No se econtraron resultados con el Id del Usuario 0
+   en TRAX.Framework.Negocio.Web.Api.Core.CoreTraxApi.FindAhorroByIdUsuario(Int32 IdUsuario) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Framework.Negocio.Web.Api\Core\CoreTraxApi.cs:línea 132
+   en TRAX.Web.Api.Controllers.CajaAhorroController.obtenerAhorros(ObtenerAhorroByUsuarioRequestDTO request) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Web.Api\Controllers\CajaAhorroController.cs:línea 105
+06/01/2022 03:23:02.232 p. m. | No se econtraron resultados con el Id del Usuario 0
+   en TRAX.Framework.Negocio.Web.Api.Core.CoreTraxApi.FindAhorroByIdUsuario(Int32 IdUsuario) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Framework.Negocio.Web.Api\Core\CoreTraxApi.cs:línea 132
+   en TRAX.Web.Api.Controllers.CajaAhorroController.obtenerAhorros(ObtenerAhorroByUsuarioRequestDTO request) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Web.Api\Controllers\CajaAhorroController.cs:línea 105
+06/01/2022 03:23:05.235 p. m. | No se econtraron resultados con el Id del Usuario 0
+   en TRAX.Framework.Negocio.Web.Api.Core.CoreTraxApi.FindAhorroByIdUsuario(Int32 IdUsuario) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Framework.Negocio.Web.Api\Core\CoreTraxApi.cs:línea 132
+   en TRAX.Web.Api.Controllers.CajaAhorroController.obtenerAhorros(ObtenerAhorroByUsuarioRequestDTO request) en C:\Users\ivan.tapia\source\repos\TRAX.Web.Api\TRAX.Web.Api\Controllers\CajaAhorroController.cs:línea 105
