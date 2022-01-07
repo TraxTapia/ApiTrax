@@ -22,12 +22,12 @@ namespace TRAX.Web.Api.Controllers
     public class CajaAhorroController : ApiController
     {
         private Logger _Logger;
-      
+
         public CajaAhorroController()
         {
             this._Logger = new Logger(System.Web.Hosting.HostingEnvironment.MapPath("~/" + Properties.Settings.Default.LogPath));
         }
-      
+
         [HttpPost]
         [Route("Usuarios")]
         public OperationResult AddUusuarios(UsuariosRequestDTO request)
@@ -44,7 +44,7 @@ namespace TRAX.Web.Api.Controllers
 
                 }
                 CoreTraxApi _Core = new CoreTraxApi(this._Logger);
-                _Response = _Core.AgregarUsuario(request.Nombre, request.ApellidoPaterno,request.ApellidoMaterno);
+                _Response = _Core.AgregarUsuario(request.Nombre, request.ApellidoPaterno, request.ApellidoMaterno);
 
 
 
@@ -73,7 +73,7 @@ namespace TRAX.Web.Api.Controllers
 
                 }
                 CoreTraxApi _Core = new CoreTraxApi(this._Logger);
-                _Response = _Core.AddAhorro(request.IdUsuario, request.Cantidad, request.FechaCobro,request.Total);
+                _Response = _Core.AddAhorro(request.IdUsuario, request.Cantidad, request.FechaCobro, request.Total);
 
 
 
@@ -116,7 +116,32 @@ namespace TRAX.Web.Api.Controllers
             return _Response;
         }
 
+        [HttpPost]
+        [Route("AhorrosUsuarios")]
+        public ObtenerListadoUsuariosResponseDTO ListadoUsuariosAhorro()
+        {
+            ObtenerListadoUsuariosResponseDTO response = new ObtenerListadoUsuariosResponseDTO();
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    var _Errors = ModelState.Values.SelectMany(x => x.Errors).ToList();
+                    response.Result.SetStatusCode(OperationResult.StatusCodesEnum.BAD_REQUEST);
+                    _Errors.ForEach(x => { if (x.Exception == null) response.Result.AddException(new Exception(x.ErrorMessage)); else response.Result.AddException(x.Exception); });
+                    return response;
+                }
+                CoreTraxApi _Core = new CoreTraxApi(this._Logger);
+                response = _Core.ListUsuariosAhorro();
+            }
+            catch (Exception ex)
+            {
+                this._Logger.LogError(ex);
+                response.Result.SetStatusCode(OperationResult.StatusCodesEnum.INTERNAL_SERVER_ERROR);
+                response.Result.AddException(ex);
 
+            }
+            return response;
+        }
 
 
     }

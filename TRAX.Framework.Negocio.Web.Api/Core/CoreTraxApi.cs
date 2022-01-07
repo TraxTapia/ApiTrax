@@ -78,11 +78,11 @@ namespace TRAX.Framework.Negocio.Web.Api.Core
             {
                 RepositoryTrax _repository = new RepositoryTrax();
 
-               var existe = _repository.ExisteRegistro(IdUsuario);
+                var existe = _repository.ExisteRegistro(IdUsuario);
                 if (!existe)
                 {
                     decimal sum = 0;
-                    sum =  Cantidad;
+                    sum = Cantidad;
                     Ahorro ahorro = new Ahorro()
                     {
                         Id_Usuario = IdUsuario,
@@ -94,7 +94,8 @@ namespace TRAX.Framework.Negocio.Web.Api.Core
                     _repository.AddDatos(ahorro);
 
                 }
-                else {
+                else
+                {
                     decimal suma = 0;
                     var result = FindAhorroByIdUsuario(IdUsuario);
                     List<decimal> listCantidad = new List<decimal>();
@@ -114,7 +115,7 @@ namespace TRAX.Framework.Negocio.Web.Api.Core
 
 
                 }
-              
+
             }
             catch (Exception ex)
             {
@@ -149,8 +150,45 @@ namespace TRAX.Framework.Negocio.Web.Api.Core
             return _Response;
 
         }
+        public ObtenerListadoUsuariosResponseDTO ListUsuariosAhorro()
+        {
+            List<Ahorro> _query = new List<Ahorro>();
+            try
+            {
+                ObtenerListadoUsuariosResponseDTO _Response = new ObtenerListadoUsuariosResponseDTO();
 
+                RepositoryTrax repository = new RepositoryTrax();
+                _query = repository.ObtenerAhorrosUsuarios();
+                if (!_query.Any())
+                {
+                    throw new Exception("No se encontraron resultados");
+                }
+                _Response = MapListAhorrosxUsuario(_query);
+                return _Response;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+
+        public ObtenerListadoUsuariosResponseDTO MapListAhorrosxUsuario(List<Ahorro> lts)
+        {
+            ObtenerListadoUsuariosResponseDTO response = new ObtenerListadoUsuariosResponseDTO();
+            response.List = lts.Select(x => new AhorroDTO()
+            {
+                IdUsuario = x.Id_Usuario,
+                Cantidad = x.Cantidad,
+                NombreCompleto = string.Join(" ", x.Usuario.Nombre, x.Usuario.ApellidoPaterno, x.Usuario.ApellidoMaterno),
+                FechaCobro = x.Fecha_Cobro,
+                Total = x.Total,
+
+            }).ToList();
+
+            return response;
+
+        }
 
 
     }

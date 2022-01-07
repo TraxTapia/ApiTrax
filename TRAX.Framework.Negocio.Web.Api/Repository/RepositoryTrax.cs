@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TRAX.Models.Web.Api.Enum;
 using TRAX.Models.Web.Api.Models.BDCajaAhorro;
 using TRAX.Models.Web.Api.Models.BDContext;
 
@@ -129,6 +130,29 @@ namespace TRAX.Framework.Negocio.Web.Api.Repository
                 
             }
             return existe;
+        }
+
+
+        public List<Ahorro> ObtenerAhorrosUsuarios()
+        {
+            List<Ahorro> list = new List<Ahorro>();
+            try
+            {
+                using (CajaAhorro _contex = new CajaAhorro())
+                {
+                    list = _contex.Ahorro.Include(x => x.Usuario).Where(x => x.Activo.Equals(EstatusGeneral.Activo)).ToList();
+                }
+                
+                return list;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Ocurrio un error: "+ex.Message);
+            }
+          
+            
         }
 
     }
