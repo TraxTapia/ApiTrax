@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4535cc06-774d-439b-8e45-9588e52f5686": {
+      "ProjectGuid": "4535cc06-774d-439b-8e45-9588e52f5686",
+      "DisplayName": "TRAX.Framework.Negocio.Web.Api",
+      "ColorIndex": 0
+    },
+    "fb855ef0-9a53-423f-9abe-4f257ddb24ff": {
+      "ProjectGuid": "fb855ef0-9a53-423f-9abe-4f257ddb24ff",
+      "DisplayName": "TRAX.Web.Api",
+      "ColorIndex": 1
+    },
+    "f1723140-43d8-4bbf-a114-eec192071bd4": {
+      "ProjectGuid": "f1723140-43d8-4bbf-a114-eec192071bd4",
+      "DisplayName": "TRAX.Models.Web.Api",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
