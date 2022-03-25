@@ -149,7 +149,7 @@ namespace TRAX.Framework.Negocio.Web.Api.Repository
             catch (Exception ex)
             {
 
-                throw new Exception("Ocurrio un error: "+ex.Message);
+                throw new Exception("Ocurrio un error: " +ex.Message);
             }
           
             
