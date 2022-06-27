@@ -18,6 +18,7 @@ using TRAX.Models.Web.Api.TraxApi.Response;
 
 namespace TRAX.Web.Api.Controllers
 {
+    [Authorize]
     [RoutePrefix("CajaAhorro")]
     public class CajaAhorroController : ApiController
     {
